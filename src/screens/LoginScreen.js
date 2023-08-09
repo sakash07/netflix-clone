@@ -8,11 +8,16 @@ function LoginScreen() {
     <div className="loginScreen">
       <div className="loginScreen_background">
         <img
+          data-testid="loginScreen_logo"
           className="loginScreen_logo"
           src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
           alt=""
         />
-        <button onClick={() => setSignIn(true)} className="loginScreen_button">
+        <button
+          data-testid="loginScreen_button"
+          onClick={() => setSignIn(true)}
+          className="loginScreen_button"
+        >
           Sign In
         </button>
         <div className="loginScreen_gradient" />

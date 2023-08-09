@@ -20,7 +20,7 @@ function Nav() {
   }, []);
 
   return (
-    <div className={`nav ${show && "nav_black"}`}>
+    <div data-testid="navComponent" className={`nav ${show && "nav_black"}`}>
       <div className="nav_contents">
         <img
           onClick={() => navigate("/")}
