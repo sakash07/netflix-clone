@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^14.4.3",
     "axios": "^1.4.0",
     "firebase": "^10.1.0",
+    "firestore-jest-mock": "^0.21.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.1",
@@ -46,12 +47,19 @@
     "@babel/preset-react": "^7.22.5",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^14.0.0",
+    "babel-jest": "^29.6.2",
+    "firebase-mock": "^2.3.2",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^27.5.1"
+    "jest": "^27.5.1",
+    "redux-mock-store": "^1.5.4"
   },
   "jest": {
     "moduleNameMapper": {
-      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy",
+      "axios": "axios/dist/node/axios.cjs"
+    },
+    "transform": {
+      "^.+\\.js$": "babel-jest"
     }
   }
 }

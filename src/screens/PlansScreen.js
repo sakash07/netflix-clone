@@ -9,7 +9,7 @@ function PlansScreen() {
   const [products, setProducts] = useState([]);
   const user = useSelector(selectUser);
   const [subscription, setSubscription] = useState(null);
-
+  console.log(user);
   useEffect(() => {
     db.collection("customers")
       .doc(user.uid)
@@ -25,7 +25,7 @@ function PlansScreen() {
           });
         });
       });
-  }, [user.uid]);
+  }, [user]);
 
   useEffect(() => {
     db.collection("products")

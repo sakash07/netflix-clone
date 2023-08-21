@@ -26,6 +26,7 @@ function Banner() {
   }
   return (
     <header
+      data-testid="banner"
       className="banner"
       style={{
         backgroundSize: "cover",
