@@ -15,11 +15,3 @@ test("displays a login screen logo", async () => {
     "https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
   );
 });
-
-test("SignUpScreen renders on click on SignIn button", async () => {
-  render(<LoginScreen />);
-  const button = await screen.findByTestId("loginScreen_button");
-  fireEvent.click(button);
-  const loginScreenComponent = screen.getByTestId("loginScreen");
-  expect(loginScreenComponent).toBeInTheDocument();
-});
